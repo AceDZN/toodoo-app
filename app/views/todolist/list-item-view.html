@@ -1,0 +1,4 @@
+
+  <input id="item-{{item.id}}" type="checkbox" ng-model="item.done"/>
+  <label for="item-{{item.id}}"><span ng-if="item.createdOn">{{item.createdOn|date:'short'}} | </span>{{item.value | limitTo:70}}</label>
+  <input ng-click="toDoListCtrl.removeItem(item.id)" type="button" value="&#x2716;" ng-if="item.canBeDeleted" ng-model="item.canBeDeleted" />

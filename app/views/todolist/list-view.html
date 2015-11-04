@@ -1,0 +1,8 @@
+<ul class="toodoo-list">
+  <li>
+    <todo-new-item-form></todo-new-item-form>
+  </li>
+  <li ng-repeat="item in toDoListCtrl.items" ng-class="{'todo-done': item.done}">
+    <todo-list-item></todo-list-item>
+  </li>
+</ul>

@@ -1,0 +1,5 @@
+<form name="addNewForm" novalidate ng-submit="addNewForm.$valid && newToDoCtrl.addNewItem(toDoListCtrl.items)">
+  <input type="checkbox" ng-model="newToDoCtrl.item.done"/>
+  <input required type="text" placeholder="Add New TooDoo" ng-model="newToDoCtrl.item.value"/>
+  <input type="submit" value="Add To List" class="add-new" ng-click="newToDoCtrl.item.submit()" />
+</form>

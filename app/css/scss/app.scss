@@ -1,0 +1,184 @@
+// Global Variables
+$main-width:600;
+$base-font-size:16;
+
+// Mixins
+@mixin radius($tl:0,$tr:0,$br:0,$bl:0){
+  border-radius: $tl $tr $br $bl;
+  -moz-border-radius: $tl $tr $br $bl;
+  -webkit-border-radius: $tl $tr $br $bl;
+}
+
+@function calc-percent($target:0, $context: $main-width){
+    @return percentage($target / $context);
+}
+
+@function calc-font-em($px, $base: $base-font-size) {
+    @return ($px / $base) * 1em;
+}
+
+@function calc-em($pixels, $context: $base-font-size){
+    @return #{$pixels/$context}em;
+}
+
+html{font-size: $base-font-size;}
+input:focus {outline:0;}
+
+
+// App Styling
+section{
+  margin: 0px auto;
+  width: 100%;
+  max-width: #{$main-width}px;
+  @include radius(calc-em(5),calc-em(5),calc-em(5),calc-em(5));
+  box-shadow: 0 0 calc-em(10) 0 #797979;
+}
+input[type='text']{
+  border: 1px solid #c0c0c0;
+  @include radius(calc-em(5),calc-em(5),calc-em(5),calc-em(5));
+  line-height: normal;
+  padding: 0 10px;
+  box-sizing: border-box;
+  &.ng-invalid{
+    box-shadow: inset 0 0 1px 0 red;
+  }
+  &.ng-valid{
+    box-shadow: inset 0 0 1px 0 green;
+  }
+
+}
+
+
+
+
+.toodoo-list{
+  font-family: 'Roboto', sans-serif;
+  margin:0;
+  width:100%;
+  list-style: none;
+  padding:0;
+  li{
+    @extend .toodoo-list;
+    height:calc-em(50);
+    line-height: calc-em(50);
+    border:1px solid #c0c0c0;
+    border-top-width: 0px;
+    &:nth-child(1n){
+      background:#F5F4F4;;
+    }
+    &:nth-child(2n){
+      background:#fff;;
+    }
+
+    &:first-child{
+      border-top-width: 1px;
+      @include radius(calc-em(5),calc-em(5),0,0);
+      height:calc-em(60);
+      line-height: calc-em(60);
+      input[type='checkbox']{
+        height: calc-em(60);
+      }
+    }
+    &:last-child{
+
+      @include radius(0,0,calc-em(5),calc-em(5));
+    }
+    &:only-child{
+      border-top-width: 1px;
+      @include radius(calc-em(5),calc-em(5),calc-em(5),calc-em(5));
+    }
+    &:after {
+       visibility: hidden;
+       display: block;
+       font-size: 0;
+       content: " ";
+       clear: both;
+       height: 0;
+     }
+    &.todo-done{
+     text-decoration: line-through;
+     box-shadow: inset 0 calc-em(25) 0 0 rgba(192, 192, 192, 0.12);
+     label{
+      text-decoration: line-through;
+      }
+    }
+    label{
+      cursor:pointer;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: calc-percent(490);
+      display: inline-block;
+      float: left;
+      span{
+        font-size: calc-font-em(12);
+      }
+    }
+    input[type='checkbox']{
+      display: inline-block;
+      float: left;
+      margin: 0 calc-em(10);
+      height: calc-em(50);
+      width:calc-percent(20);
+    }
+    input[type='text']{
+      @extend input[type='text'];
+      height: calc-em(30);
+      width: calc-percent(420);
+    }
+
+    input[type='button']{
+      width:calc-percent(25);
+      float:right;
+      margin-top: calc-em(12.5);
+      margin-left: calc-em(10);
+      margin-right: calc-em(10);
+      display:inline;
+      background:#f7f7f7;
+      @include radius(calc-em(25),calc-em(25),calc-em(25),calc-em(25));
+      padding:0;
+      height:calc-em(25);width:calc-percent(25);
+      border:calc-em(1) solid #c0c0c0;
+      color:#D20000;
+      text-align: center;
+
+
+      &:hover{
+        background:#fff;
+      }
+      &:focus {outline:0;}
+      &:active{
+        outline: none;
+        border: none;
+        color:#fff;
+        background:#D20000;
+      }
+    }
+    input[type='submit']{
+      @extend input[type='button'];
+      background: green;
+      color:#fff;
+      height:calc-em(37);
+      line-height: calc-em(37);
+      margin-top:calc-em(15);
+      font-size:calc-font-em(14);
+      display: block;
+      width:calc-percent(100);
+      border:1px solid #c0c0c0;
+      @include radius(calc-em(5),calc-em(5),calc-em(5),calc-em(5));
+      &:hover{
+        background:#fff;
+        border-color: green;
+        color:green;
+      }
+      &:focus {outline:0;}
+      &:active{
+        color:#fff;
+        background:green;
+      }
+    }
+
+  }
+
+
+}

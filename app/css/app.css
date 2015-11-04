@@ -1,0 +1,198 @@
+/* line 24, scss/app.scss */
+html {
+  font-size: 16;
+}
+
+/* line 25, scss/app.scss */
+input:focus {
+  outline: 0;
+}
+
+/* line 29, scss/app.scss */
+section {
+  margin: 0px auto;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 0.3125em 0.3125em 0.3125em 0.3125em;
+  -moz-border-radius: 0.3125em 0.3125em 0.3125em 0.3125em;
+  -webkit-border-radius: 0.3125em 0.3125em 0.3125em 0.3125em;
+  box-shadow: 0 0 0.625em 0 #797979;
+}
+
+/* line 36, scss/app.scss */
+input[type='text'], .toodoo-list li input[type='text'] {
+  border: 1px solid #c0c0c0;
+  border-radius: 0.3125em 0.3125em 0.3125em 0.3125em;
+  -moz-border-radius: 0.3125em 0.3125em 0.3125em 0.3125em;
+  -webkit-border-radius: 0.3125em 0.3125em 0.3125em 0.3125em;
+  line-height: normal;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+/* line 42, scss/app.scss */
+input[type='text'].ng-invalid, .toodoo-list li input.ng-invalid[type='text'] {
+  box-shadow: inset 0 0 1px 0 red;
+}
+/* line 45, scss/app.scss */
+input[type='text'].ng-valid, .toodoo-list li input.ng-valid[type='text'] {
+  box-shadow: inset 0 0 1px 0 green;
+}
+
+/* line 54, scss/app.scss */
+.toodoo-list, .toodoo-list li {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  width: 100%;
+  list-style: none;
+  padding: 0;
+}
+/* line 60, scss/app.scss */
+.toodoo-list li {
+  height: 3.125em;
+  line-height: 3.125em;
+  border: 1px solid #c0c0c0;
+  border-top-width: 0px;
+}
+/* line 66, scss/app.scss */
+.toodoo-list li:nth-child(1n) {
+  background: #F5F4F4;
+}
+/* line 69, scss/app.scss */
+.toodoo-list li:nth-child(2n) {
+  background: #fff;
+}
+/* line 73, scss/app.scss */
+.toodoo-list li:first-child {
+  border-top-width: 1px;
+  border-radius: 0.3125em 0.3125em 0 0;
+  -moz-border-radius: 0.3125em 0.3125em 0 0;
+  -webkit-border-radius: 0.3125em 0.3125em 0 0;
+  height: 3.75em;
+  line-height: 3.75em;
+}
+/* line 78, scss/app.scss */
+.toodoo-list li:first-child input[type='checkbox'] {
+  height: 3.75em;
+}
+/* line 82, scss/app.scss */
+.toodoo-list li:last-child {
+  border-radius: 0 0 0.3125em 0.3125em;
+  -moz-border-radius: 0 0 0.3125em 0.3125em;
+  -webkit-border-radius: 0 0 0.3125em 0.3125em;
+}
+/* line 86, scss/app.scss */
+.toodoo-list li:only-child {
+  border-top-width: 1px;
+  border-radius: 0.3125em 0.3125em 0.3125em 0.3125em;
+  -moz-border-radius: 0.3125em 0.3125em 0.3125em 0.3125em;
+  -webkit-border-radius: 0.3125em 0.3125em 0.3125em 0.3125em;
+}
+/* line 90, scss/app.scss */
+.toodoo-list li:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+/* line 98, scss/app.scss */
+.toodoo-list li.todo-done {
+  text-decoration: line-through;
+  box-shadow: inset 0 1.5625em 0 0 rgba(192, 192, 192, 0.12);
+}
+/* line 101, scss/app.scss */
+.toodoo-list li.todo-done label {
+  text-decoration: line-through;
+}
+/* line 105, scss/app.scss */
+.toodoo-list li label {
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 81.66667%;
+  display: inline-block;
+  float: left;
+}
+/* line 113, scss/app.scss */
+.toodoo-list li label span {
+  font-size: 0.75em;
+}
+/* line 117, scss/app.scss */
+.toodoo-list li input[type='checkbox'] {
+  display: inline-block;
+  float: left;
+  margin: 0 0.625em;
+  height: 3.125em;
+  width: 3.33333%;
+}
+/* line 124, scss/app.scss */
+.toodoo-list li input[type='text'] {
+  height: 1.875em;
+  width: 70%;
+}
+/* line 130, scss/app.scss */
+.toodoo-list li input[type='button'], .toodoo-list li input[type='submit'] {
+  width: 4.16667%;
+  float: right;
+  margin-top: 0.78125em;
+  margin-left: 0.625em;
+  margin-right: 0.625em;
+  display: inline;
+  background: #f7f7f7;
+  border-radius: 1.5625em 1.5625em 1.5625em 1.5625em;
+  -moz-border-radius: 1.5625em 1.5625em 1.5625em 1.5625em;
+  -webkit-border-radius: 1.5625em 1.5625em 1.5625em 1.5625em;
+  padding: 0;
+  height: 1.5625em;
+  width: 4.16667%;
+  border: 0.0625em solid #c0c0c0;
+  color: #D20000;
+  text-align: center;
+}
+/* line 146, scss/app.scss */
+.toodoo-list li input[type='button']:hover, .toodoo-list li input[type='submit']:hover {
+  background: #fff;
+}
+/* line 149, scss/app.scss */
+.toodoo-list li input[type='button']:focus, .toodoo-list li input[type='submit']:focus {
+  outline: 0;
+}
+/* line 150, scss/app.scss */
+.toodoo-list li input[type='button']:active, .toodoo-list li input[type='submit']:active {
+  outline: none;
+  border: none;
+  color: #fff;
+  background: #D20000;
+}
+/* line 157, scss/app.scss */
+.toodoo-list li input[type='submit'] {
+  background: green;
+  color: #fff;
+  height: 2.3125em;
+  line-height: 2.3125em;
+  margin-top: 0.9375em;
+  font-size: 0.875em;
+  display: block;
+  width: 16.66667%;
+  border: 1px solid #c0c0c0;
+  border-radius: 0.3125em 0.3125em 0.3125em 0.3125em;
+  -moz-border-radius: 0.3125em 0.3125em 0.3125em 0.3125em;
+  -webkit-border-radius: 0.3125em 0.3125em 0.3125em 0.3125em;
+}
+/* line 169, scss/app.scss */
+.toodoo-list li input[type='submit']:hover {
+  background: #fff;
+  border-color: green;
+  color: green;
+}
+/* line 174, scss/app.scss */
+.toodoo-list li input[type='submit']:focus {
+  outline: 0;
+}
+/* line 175, scss/app.scss */
+.toodoo-list li input[type='submit']:active {
+  color: #fff;
+  background: green;
+}
