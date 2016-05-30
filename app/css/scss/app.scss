@@ -23,11 +23,18 @@ $base-font-size:16;
 
 html{font-size: $base-font-size;}
 input:focus {outline:0;}
-
-
+.text-center{text-align:center;}
+.fork-me{
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 0;
+  max-width: 50%;
+  cursor: pointer;
+}
 // App Styling
 section{
-  margin: 0px auto;
+  margin: 40px auto 20px;
   width: 100%;
   max-width: #{$main-width}px;
   @include radius(calc-em(5),calc-em(5),calc-em(5),calc-em(5));
@@ -181,4 +188,7 @@ input[type='text']{
   }
 
 
+}
+.text-center{
+  text-align:center;
 }

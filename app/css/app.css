@@ -2,15 +2,24 @@
 html {
   font-size: 16;
 }
-
+.text-center{
+  text-align:center;
+}
 /* line 25, scss/app.scss */
 input:focus {
   outline: 0;
 }
-
+.fork-me{
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 0;
+  max-width: 50%;
+  cursor: pointer;
+}
 /* line 29, scss/app.scss */
 section {
-  margin: 0px auto;
+  margin: 40px auto 20px;
   width: 100%;
   max-width: 600px;
   border-radius: 0.3125em 0.3125em 0.3125em 0.3125em;
